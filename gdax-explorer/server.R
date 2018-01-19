@@ -26,7 +26,7 @@ shinyServer(function(input, output) {
 
   output$earnings <- renderText({
     earning_df <- get_earnings_data(dataset())
-    profit <- round(sum(earning_df$earnings), 5)
+    profit <- format(round(sum(earning_df$earnings), 5), digits = 5)
     msg <- paste("The MACD strategy would have generated", profit, "in earnings.")
     msg
   })
