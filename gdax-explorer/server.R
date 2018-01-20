@@ -1,5 +1,4 @@
 library(shiny)
-library(DT)
 library(httr)
 library(dplyr)
 library(ggplot2)
